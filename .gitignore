@@ -30,3 +30,6 @@ override.tf.json
 
 
 lab01/.terraform.lock.hcl
+
+.DS_Store
+.env
