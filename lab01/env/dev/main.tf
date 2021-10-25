@@ -22,8 +22,20 @@ provider "azurerm" {
 
 module "linux-server" {
   source           = "../../modules/servers"
-  linux-password   = "Password123"
-  linux-user       = "adminfrb"
+  linux-password   = var.linux_password
+  linux-user       = "adminfrb03"
   environment      = "dev"
   cantidad-servers = 1
 } 
+
+module "aks" {
+  source = "../../modules/aks"
+  resource_group_name = module.linux-server.resource-group-name
+  location = module.linux-server.location
+  client_id = var.client_id
+  client_secret = var.client_secret
+}
+
+# module "k8s" {
+#   source = "../../modules/k8s-deploy"
+# }
