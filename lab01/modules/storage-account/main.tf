@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "infra" {
 }
 
 resource "azurerm_storage_account" "this-is-where-my-state-is" {
-    name = "iacucreativa"
+    name = "iacucreativa2021"
     resource_group_name = azurerm_resource_group.infra.name
     location = azurerm_resource_group.infra.location
     account_tier = "Standard"

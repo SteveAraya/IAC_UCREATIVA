@@ -1,6 +1,6 @@
 variable "name" {
   type    = string
-  default = "iacucreativa"
+  default = "iacucreativa2021"
 }
 
 variable "resource-group" {
